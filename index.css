@@ -1,0 +1,11 @@
+@import url('nav.css');
+@import url('iphone17s.css');
+@import url('iphone_Products.css');
+@import url('carousel1.css');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

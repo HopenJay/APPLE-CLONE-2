@@ -1,0 +1,51 @@
+.iphone_Products{
+    /* border: 1px solid orange; */
+    margin-top: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr; /*for screens after 735px repeat(2, 1fr)*/
+    gap: 0.5em;
+    width: 100%;      /* shrink on small screens */
+}
+
+.iphone_Products > div{
+    /* border: 1px solid #000; */
+    height: 750px; 
+    overflow: hidden;
+}
+
+.name > div{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.name > div img{
+    width: 20px;
+}
+
+.name > div > p > span{
+    font-weight: 100;
+}
+
+.name > p > span{
+    color: royalblue;
+    font-style: italic;
+}
+
+.fw{
+    background-color:  #f5f5f7;
+}
+
+.fb{
+    background-color: #aeddef;
+}
+
+.flb{
+    background-color: #d4eaf7;
+}
+
+@media (min-width: 734px) {
+    .iphone_Products{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

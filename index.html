@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- For Mobile View First -->
+    <nav>
+        <div class="nav-left-chevron">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <polyline points="16 6 8 12 16 18"/>
+            </svg>
+        </div>
+        <div class="nav-apple-img">
+            <a href="index.html" aria-label="apple-logo">
+                <span>
+                    <svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <div class="nav-search-icon">
+            <a href="/search.html" aria-label="search" id ="search-icon" >
+                <span>
+                    <svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z"></path>
+                    </svg>
+                </span>
+            </a>
+
+            <div class="search-dropdown">
+                <div class="close-search-menu" aria-label="close-search-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                        <line x1="4" y1="4" x2="20" y2="20" stroke="grey" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="20" y1="4" x2="4" y2="20" stroke="grey" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <div class="search-in-search">
+                    <div>
+                        <span>
+                            <svg height="42" viewBox="0 0 17 42" width="17" xmlns="http://www.w3.org/2000/svg" fill="grey">
+                                <path d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z"></path>
+                                
+                                  Extra bold handle overlay 
+                                <line x1="12.05" y1="25.87" x2="16.23" y2="29.96" stroke="grey" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="search-inp">
+                        <input type="search" placeholder="Search" class="search-input" id = "searchhhhhhhh">
+                    </div>
+                </div>
+                <div class="search-list">
+                    <p>Quick Links</p>
+                    <ul class="search-ul">
+                        <li>Find a Store</li>
+                        <li>Apple Vision Pro</li>
+                        <li>AirPods</li>
+                        <li>Apple Intelligence</li>
+                        <li>Apple Trade In</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-bag-icon">
+            <a href="#" aria-label="shopping-bag" id = "bag-icon">
+                <span class="globalnav-image-compact">
+                    <svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path>
+                    </svg>
+                </span>
+            </a>
+
+            <div class="bag-dropdown">
+                <div class="close-bag-menu" aria-label="close-bag-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                        <line x1="4" y1="4" x2="20" y2="20" stroke="grey" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="20" y1="4" x2="4" y2="20" stroke="grey" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <div class="bag-content">
+                    <div class="bag-items">
+                        <p>Your Bag is empty.</p>
+                    </div>
+
+                    <div class="
+                    bag-link">
+                        <p><a href="#">Sign in</a> to see if you have any saved items</p>
+                    </div>
+                </div>
+                
+                <div class="bag-list">
+                    <p>My Profile</p>
+                    <ul class="bag-ul">
+                        <li class="order">Orders</li>
+                        <li class="bookmark">Your Saves</li>
+                        <li class="gear">Account</li>
+                        <li class="avatar">Sign in</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-menu-icon">
+            <button aria-label="menu" class="menu-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18">
+                    <polyline id="globalnav-menutrigger-bread-bottom" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 12, 16 12" class="globalnav-menutrigger-bread globalnav-menutrigger-bread-bottom">
+                        <animate id="globalnav-anim-menutrigger-bread-bottom-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate>
+                        <animate id="globalnav-anim-menutrigger-bread-bottom-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate>
+                    </polyline>
+
+                    <polyline id="globalnav-menutrigger-bread-top" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 5, 16 5" class="globalnav-menutrigger-bread globalnav-menutrigger-bread-top">
+                        <animate id="globalnav-anim-menutrigger-bread-top-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate>
+                        <animate id="globalnav-anim-menutrigger-bread-top-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate>
+                    </polyline>
+                </svg>
+            </button>
+
+            <div class="menu-dropdown">
+                <div class="menu-items" aria-label="menu-items">
+                    <ul class="menu-ul">
+                        <li class="a">Store
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>Shop the Latest</li>
+                                        <li>Mac</li>
+                                        <li>iPad</li>
+                                        <li>iPhone</li>
+                                        <li>Apple Watch</li>
+                                        <li>Apple Vision Pro</li>
+                                        <li>AirPods</li>
+                                        <li>Accessories</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Quick Links</p>
+                                        <li>Find a Store</li>
+                                        <li>Order Status</li>
+                                        <li>Apple Trade In</li>
+                                        <li>Financing</li>
+                                        <li>Personal Setup</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content3">
+                                    <ul class="sub-content3-list">
+                                        <p>Shop Special Stores</p>
+                                        <li>Certified Refurbished</li>
+                                        <li>Education</li>
+                                        <li>Business</li>
+                                        <li>Veterans and Military</li>
+                                        <li>Government</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">Mac
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>Explore All Mac</li>
+                                        <li>MacBook Air</li>
+                                        <li>MacBook Pro</li>
+                                        <li>iMac</li>
+                                        <li>Mac mini</li>
+                                        <li>Mac Studio</li>
+                                        <li>Mac Pro</li>
+                                        <li>Displays</li>
+                                        <li>Compare Mac</li>
+                                        <li>Switch from PC to Mac</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Shop Mac</p>
+                                        <li>Shop Mac</li>
+                                        <li>Help Me Choose</li>
+                                        <li>Mac Accessories</li>
+                                        <li>Apple Trade In</li>
+                                        <li>Financing</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content3">
+                                    <ul class="sub-content3-list">
+                                        <p>More from Mac</p>
+                                        <li>Mac Support</li>
+                                        <li>Apple Care</li>
+                                        <li>macOs Tahoe</li>
+                                        <li>Apple Intelligence</li>
+                                        <li>Apps by Apple</li>
+                                        <li>Continuity</li>
+                                        <li>iCloud+</li>
+                                        <li>Mac for Business</li>
+                                        <li>Education</li>
+                                        <li>Accessibility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">iPad
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>Explore All iPad</li>
+                                        <li>iPad Pro</li>
+                                        <li>iPad Air</li>
+                                        <li>iPad</li>
+                                        <li>iPad mini</li>
+                                        <li>Apple Pencil</li>
+                                        <li>Keyboards</li>
+                                        <li>Compare iPad</li>
+                                        <li>Why iPad</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Shop iPad</p>
+                                        <li>Shop iPad</li>
+                                        <li>iPad Accessories</li>
+                                        <li>Apple Trade In</li>
+                                        <li>Financing</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content3">
+                                    <ul class="sub-content3-list">
+                                        <p>More from iPad</p>
+                                        <li>iPad Support</li>
+                                        <li>AppleCare</li>
+                                        <li>iPadOS 26</li>
+                                        <li>Apple Intelligence</li>
+                                        <li>Apps by Apple</li>
+                                        <li>iCloud+</li>
+                                        <li>Education</li>
+                                        <li>Accessibility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">iPhone
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>Explore All iPhone</li>
+                                        <li>iPhone 17 Pro</li>
+                                        <li>iPhone Air</li>
+                                        <li>iPhone 17</li>
+                                        <li>iPhone 16</li>
+                                        <li>iPhone 16e</li>
+                                        <li>Compare iPhone</li>
+                                        <li>Switch from Android</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Shop iPhone</p>
+                                        <li>Shop iPhone</li>
+                                        <li>iPhone Accessories</li>
+                                        <li>Apple Trade In</li>
+                                        <li>Carrier Deals at Apple</li>
+                                        <li>Financing</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content3">
+                                    <ul class="sub-content3-list">
+                                        <p>More from iPhone</p>
+                                        <li>iPhone Support</li>
+                                        <li>AppleCare</li>
+                                        <li>iOS 26</li>
+                                        <li>Apple Intelligence</li>
+                                        <li>Apps by Apple</li>
+                                        <li>iPhone Privacy</li>
+                                        <li>iCloud+</li>
+                                        <li>Wallet, Pay, Card</li>
+                                        <li>Siri</li>
+                                        <li>Accessibility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">Watch
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>Explore All Apple Watch</li>
+                                        <li>Apple Watch Series 11</li>
+                                        <li>Apple Watch SE 3</li>
+                                        <li>Apple Watch Ultra 3</li>
+                                        <li>Apple Watch Nike</li>
+                                        <li>Apple Watch Hermes</li>
+                                        <li>Compare Watch</li>
+                                        <li>Why Apple Watch</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Shop Watch</p>
+                                        <li>Shop Apple Watch</li>
+                                        <li>Apple Watch Brands</li>
+                                        <li>Apple Watch Accessories</li>
+                                        <li>Apple Trade In</li>
+                                        <li>Financing</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content3">
+                                    <ul class="sub-content3-list">
+                                        <p>More from Watch</p>
+                                        <li>Apple Watch Support</li>
+                                        <li>AppleCare</li>
+                                        <li>watchOS 26</li>
+                                        <li>Apple Watch For Your Kids</li>
+                                        <li>Apps by Apple</li>
+                                        <li>Apple Fitness+</li>
+                                        <li>Accessibility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">Vision
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>Explore Apple Vision Pro</li>
+                                        <li>Tech Specs</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Shop Vision</p>
+                                        <li>Shop Apple Vision Pro</li>
+                                        <li>Apple Vision Pro Accessories</li>
+                                        <li>Book a Demo</li>
+                                        <li>Financing</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content3">
+                                    <ul class="sub-content3-list">
+                                        <p>More from Vision</p>
+                                        <li>Apple Vision Pro Support</li>
+                                        <li>AppleCare</li>
+                                        <li>visionOS 26</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">AirPods
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>Explore All AirPods</ul>
+                                    <ul>AirPods 4</ul>
+                                    <ul>AirPods 3</ul>
+                                    <ul>AirPods Max</ul>
+                                    <ul>Compare AirPods</ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Shop AirPods</p>
+                                        <li>Shop AirPods</li>
+                                        <li>AirPods Accessories</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content3">
+                                    <ul class="sub-content3-list">
+                                        <p>More from AirPods</p>
+                                        <li>AirPods Support</li>
+                                        <li>AppleCare</li>
+                                        <li>Hearing Health</li>
+                                        <li>Apple Music</li>
+                                        <li>Apple Fitness+</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">TV & Home 
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>Exlore TV & Home</li>
+                                        <li>Apple TV 4K</li>
+                                        <li>HomePod</li>
+                                        <li>HomePod mini</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Shop TV & Home</p>
+                                        <li>Shop Apple TV 4K</li>
+                                        <li>Shop HomePod</li>
+                                        <li>Shop HomePod mini</li>
+                                        <li>Shop Siri Remote</li>
+                                        <li>TV & Home Accessories</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content3">
+                                    <ul class="sub-content3-list">
+                                        <p>More from TV & Home</p>
+                                        <li>Apple TV Support</li>
+                                        <li>HomePod Support</li>
+                                        <li>AppleCare for Apple TV</li>
+                                        <li>AppleCare for HomePod</li>
+                                        <li>Apple TV app</li>
+                                        <li>Apple TV+</li>
+                                        <li>Home app</li>
+                                        <li>Apple Music</li>
+                                        <li>Siri</li>
+                                        <li>AirPlay</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">Entertainment
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>Explore Entertainment</li>
+                                        <li>Apple One</li>
+                                        <li>Apple TV+</li>
+                                        <li>Apple Music</li>
+                                        <li>Apple Arcade</li>
+                                        <li>Apple Fitness+</li>
+                                        <li>Apple News+</li>
+                                        <li>Apple Podcasts</li>
+                                        <li>Apple Books</li>
+                                        <li>App Store</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Support</p>
+                                        <li>Apple TV+ Support</li>
+                                        <li>Apple Music Support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">Accessories
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>Shop All Accessories</li>
+                                        <li>Mac</li>
+                                        <li>iPad</li>
+                                        <li>iPhone</li>
+                                        <li>Apple Watch</li>
+                                        <li>Apple Vision Pro</li>
+                                        <li>AirPods</li>
+                                        <li>TV & Home</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Explore Accessories</p>
+                                        <li>Made by Apple</li>
+                                        <li>Beats</li>
+                                        <li>AirTag</li>
+                                        <li>Assistive Technologies</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a">Support
+                            <div class="sub-lis sub-item1">
+                                <div class="sub-content1">
+                                    <ul>
+                                        <li>iPhone</li>
+                                        <li>Mac</li>
+                                        <li>iPad</li>
+                                        <li>Watch</li>
+                                        <li>Apple Vision Pro</li>
+                                        <li>AirPods</li>
+                                        <li>Music</li>
+                                        <li>TV</li>
+                                        <li>Explore Support</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content2">
+                                    <ul class="sub-content2-list">
+                                        <p>Get Help</p>
+                                        <li>Community</li>
+                                        <li>Check Coverage</li>
+                                        <li>Genius Bar</li>
+                                        <li>Repair</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-content3">
+                                    <ul class="sub-content3-list">
+                                        <p>Helpful Topics</p>
+                                        <li>Get AppleCare</li>
+                                        <li>Apple Account and Password</li>
+                                        <li>Billing & Subscriptions</li>
+                                        <li>Accessibility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="iphone17s">
+        <div class="iPhone17_Pro">
+            <div class="content">
+                <div class="name">
+                    <p>iPhone 17 Pro</p>
+                </div>
+                <div class="extra-info">
+                    <p>All out Pro.</p>
+                </div>
+                <div class="purchase">
+                    <button class="learn_btn">
+                        Learn more
+                    </button>
+                    <button class="buy_btn">
+                        Buy
+                    </button>
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="images/17Pro.jpg" alt="17 pro img" class="pro_img">
+            </div>
+        </div>
+
+        <div class="iPhone17_Air fw">
+            <div class="content">
+                <div class="name">
+                    <p>iPhone Air</p>
+                </div>
+                <div class="extra-info">
+                    <p>
+                        The thinnest iPhone ever.<br/>With the power of pro inside.
+                    </p>
+                </div>
+                <div class="purchase">
+                    <button class="learn_btn">
+                        Learn more
+                    </button>
+                    <button class="buy_btn">
+                        Buy
+                    </button>
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="images/hero_iphone_air__small.jpg" alt="17 Air img">
+            </div>
+        </div>
+        
+        <div class="iPhone17">
+            <div class="content">
+                <div class="name">
+                    <p>iPhone 17</p>
+                </div>
+                <div class="extra-info">
+                    <p>
+                        Magichromatic.
+                    </p>
+                </div>
+                <div class="purchase">
+                    <button class="learn_btn">
+                        Learn more
+                    </button>
+                    <button class="buy_btn">
+                        Buy
+                    </button>
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="images/iPhone-17-Arrives-A-Solid-Upgrade-But-Will-It-Attract-New-Users.webp" alt="17 img">
+            </div>
+        </div>
+    </section>
+
+    <section class="iphone_Products">
+        <div class="fw">
+            <div class="content">
+                <div class="name">
+                    <div>
+                        <img src="images/apple.jpg" alt="apple">
+                        <p>WATCH<span> SERIES 11</span></p>
+                    </div>
+                </div>
+                <div class="extra-info">
+                    <p>The ultimate way to <br> watch your health.</p>
+                </div>
+                <div class="purchase">
+                    <button class="learn_btn">
+                        Learn more
+                    </button>
+                    <button class="buy_btn">
+                        Buy
+                    </button>
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="images/promo_apple_watch_series_11.jpg" alt="apple watch">
+            </div>
+        </div>
+
+        <div class="fw">
+            <div class="content">
+                <div class="name">
+                    <p>AirPods Pro 3</p>
+                </div>
+                <div class="extra-info">
+                    <p>The world's best in-ear <br> Actiive Noise Cancellation.</p>
+                </div>
+                <div class="purchase">
+                    <button class="learn_btn">
+                        Learn more
+                    </button>
+                    <button class="buy_btn">
+                        Buy
+                    </button>
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="images/promo_airpodspro_3__f6xmza7bglei_large.jpg" alt="airpods">
+            </div>
+        </div>
+
+        <div class="flb">
+            <div class="content">
+                <div class="name">
+                    <p>MacBook Air</p>
+                </div>
+                <div class="extra-info">
+                    <p>Sky blue color. <br> Sky high performance with M4.</p>
+                </div>
+                <div class="purchase">
+                    <button class="learn_btn">
+                        Learn more
+                    </button>
+                    <button class="buy_btn">
+                        Buy
+                    </button>
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="images/promo_macbook_air__fqowrtnxewqe_large.jpg" alt="Mac">
+            </div>
+        </div>
+
+        <div class="fb">
+            <div class="content">
+                <div class="name">
+                    <p>iPad <span>air</span></p>
+                </div>
+                <div class="extra-info">
+                    <p>Now supercharged by the M3 chip.</p>
+                </div>
+                <div class="purchase">
+                    <button class="learn_btn">
+                        Learn more
+                    </button>
+                    <button class="buy_btn">
+                        Buy
+                    </button>
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="images/promo_ipad_air_avail__6i02t7nujr62_medium.jpg" alt="ipad">
+            </div>
+        </div>
+
+        <div class="fw">
+            <div class="content">
+                <div class="name">
+                    <div>
+                        <img src="images/apple.jpg" alt="apple">
+                        <p>Trade In</p>
+                    </div>
+                </div>
+                <div class="extra-info">
+                    <p>Get up to $200-700 <br> in credit when you trade in <br> iPhone 13 or higher. <sup>1</sup></p>
+                </div>
+                <div class="purchase">
+                    <button class="learn_btn">
+                        Get your estimate
+                    </button>
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="images/promo_iphone_tradein__bugw15ka691e_large.jpg" alt="trade in">
+            </div>
+        </div>
+
+        <div class="fw">
+            <div class="content">
+                <div class="name">
+                    <div>
+                        <img src="images/apple.jpg" alt="apple">
+                        <p>Card</p>
+                    </div>
+                </div>
+                <div class="extra-info">
+                    <p>Get up to 3% Daily Cash back <br> with every purchase</p>
+                </div>
+                <div class="purchase">
+                    <button class="learn_btn">
+                        Learn more
+                    </button>
+                    <button class="buy_btn">
+                        Apply now
+                    </button>
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="images/promo_apple_card__5cm7draujpey_large.jpg" alt="applce card">
+            </div>
+        </div>
+    </section>
+
+    <div class="carousel0">
+        <div class="slides">
+        </div>
+    </div>
+
+    <div class="carousel1">
+        <div class="carousel1-track">
+        </div>
+    </div>
+
+    <div class="butt_parent">
+        <button class="js-butt">&#9654;</button>
+    </div>
+    <script src="index.js" type="module"></script>
+    <script>
+        const js_butt = document.querySelector('.js-butt');
+  
+        const js_carousel = document.querySelector('.carousel1-track');
+ 
+        js_butt.addEventListener('click', () => {
+            if(js_butt.textContent === '▶') {
+                js_butt.textContent = ' ⏸'; // Pause symbol
+            } else {
+                js_butt.textContent = '▶';
+            }
+
+  
+          js_carousel.classList.toggle('paused');
+        })
+        </script>
+</body>
+</html>
+

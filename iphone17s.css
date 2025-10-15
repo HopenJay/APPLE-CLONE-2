@@ -1,0 +1,73 @@
+.iphone17s{
+    /* border: 20px solid pink; */
+    margin-top: 3.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/* .iphone17s div{
+    border: 1px solid pink;
+} */
+
+.iPhone17_Pro{
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+}
+
+.content{
+    /* border: 1px solid #ffc0cb; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 0em 0em ;
+    font-family: sans-serif;
+}
+
+.name{
+    font-size: 1.8em;
+    font-weight: bolder;
+}
+
+.extra-info{
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    text-align: center;
+    /* font-weight: bold; */
+}
+
+.purchase{
+    display: flex;
+    gap: 1em;
+    margin-top: 1.3em;
+}
+
+.purchase button{
+    padding: 1em 1.5em;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.learn_btn{
+    background-color: royalblue;
+    color: #fff;
+}
+
+.buy_btn{
+    background-color: transparent;
+    border: 1px solid royalblue;
+    color: royalblue;
+}
+
+.buy_btn:hover{
+    background-color: royalblue;
+    color: #fff;
+}
+
+.bg-img img{
+    width: 100%;
+    height: 500px;
+}

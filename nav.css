@@ -1,0 +1,421 @@
+
+:root{
+    --borderBlk: 1px solid #000;
+    --full: 100%;
+}
+
+nav{
+    /* border: var(--borderBlk); */
+    width: var(--full);
+    display: flex;
+    padding: 0em 0.5em;
+    align-items: center;
+    gap: 2em;
+    background: rgba(255, 255, 255, 0.6); /* semi-transparent white */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color ease 0s;
+}
+
+nav.active{
+    background-color:#fff;
+    /* background: black;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none; */
+    transition-delay: 0s;
+}
+
+.nav-left-chevron{
+    opacity: 0;
+    position: fixed;
+    pointer-events: none;
+}
+
+.nav-apple-img{
+    flex: 1;
+}
+
+.nav-menu-icon > button{
+    background: none;
+}
+
+.search-dropdown,.bag-dropdown{ 
+    /* border: var(--borderBlk); */
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(-500px);
+    transition: transform 0.5s, opacity 0.5s;
+    pointer-events: none;
+}
+
+.open-search-active{
+    opacity: 1;
+    transform: translateY(0px);
+    /* transition: transform 1s; */
+    pointer-events: auto;
+}
+
+/* .close-search-active{
+    transform: translateY(-500px);
+    opacity: 0;
+    transition: transform 0.3s;
+    pointer-events: none;
+} */
+
+.close-search-menu, .close-bag-menu{
+    /* border: var(--borderBlk); */
+    display: flex;
+    justify-content: end;
+    padding: 0em 1em;
+}
+
+.search-in-search{
+    /* border: var(--borderBlk); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 0.5em 3em 0em;
+}
+
+input[type="search"]{
+    height: 2em;
+    font-size: 2em;
+    font-weight: bold;
+    border: none;
+}
+
+input[type="search"]:focus{
+    outline: none;
+    border: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    margin-left: 0.3em;
+    /* border: var(--borderBlk); */
+    /* background-color: #000; */
+    background-image:  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='11' fill='grey'/><path d='M8 8 L16 16 M16 8 L8 16' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    height: 20px;
+    width: 20px;
+}
+
+/* input[type="search"]::placeholder{
+    font-size: 2em;
+    font-weight: bolder;
+} */
+
+.search-inp{
+    /* border: var(--borderBlk); */
+    flex: 1;
+}
+
+.search-input{
+    width: 100%;
+}
+
+.search-list, .bag-list{
+    margin-top: 1.5em;
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0em 3em;
+    font-family: sans-serif;
+}
+
+.search-list > p, .bag-list > p{
+    color: grey;
+    font-size: 1.1em;
+}
+
+.search-ul, .bag-ul{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.search-ul li, .bag-ul li{
+    position: relative;
+    font-weight: bold;
+    padding-left: 1.5em; /* space for arrow*/
+}
+
+/* Using SVG as bullet */
+.search-ul li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    width: 1em;
+    height: 1em;
+  /* Arrow as a mask */
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>') no-repeat center / contain;
+    background-color: #000; /* arrow color */
+    transition: background-color 0.3s ease;
+}
+
+.search-ul li:hover::before{
+    background-color: grey;
+}
+.search-ul li:hover{
+    color: gray;
+}
+
+/* #search-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: opacity 0.3s ease;
+}
+#search-dropdown.show {
+  display: block;
+  opacity: 1;
+} */
+ /* Search ends here */
+
+ /* Bag */
+.bag-content{
+    /* border: 1px solid #000; */
+    margin-top: 1.5em;
+    padding: 0em 3em;
+    font-family: sans-serif;
+}
+
+.bag-items{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.bag-link{
+    padding: 1em 0em 0em;
+    /* border: 1px solid #000; */
+    color: #808080;
+    font-size: 1.3em;
+}
+
+.bag-list{
+    margin-top: 3em;
+}
+
+.bag-ul{
+    margin-top: 0.8em;
+    cursor: default;
+}
+
+.order::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1em;
+    height: 1em;
+  /* Arrow as a mask */
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7L12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12"/><path d="M3 7l9 5 9-5"/></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7L12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12"/><path d="M3 7l9 5 9-5"/></svg>') no-repeat center / contain;
+    background-color: #808080; /* arrow color */
+    transition: background-color 0.3s ease;
+}
+
+.bookmark::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1em;
+    height: 1em;
+  /* Arrow as a mask */
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v18l-6-4-6 4V2z"/></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v18l-6-4-6 4V2z"/></svg>') no-repeat center / contain;
+    background-color: #808080; /* arrow color */
+    transition: background-color 0.3s ease;
+}
+
+.gear::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1em;
+    height: 1em;
+  /* Arrow as a mask */
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>') no-repeat center / contain;
+    background-color: #808080; /* arrow color */
+    transition: background-color 0.3s ease;
+}
+
+.avatar::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1em;
+    height: 1em;
+  /* Arrow as a mask */
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>') no-repeat center / contain;
+    background-color: #808080; /* arrow color */
+    transition: background-color 0.3s ease;
+}
+
+.bookmark:hover::before,.avatar:hover::before,.gear:hover::before,.order:hover::before{
+    background-color: #000;
+}
+
+/* Menu */
+.menu-dropdown{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    top: 100%;
+    right: 0;
+    /* border: 1px solid#000; */
+    transform: translateY(-5%);
+    z-index: -1;
+    /* display: none; */
+    opacity: 0;
+    transition: transform ease 0.3s, opacity ease 0.3s;
+    display: none;
+}
+
+.menu-dropdown.active{
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0.3s;
+    z-index: 1;
+    display: block;
+}
+
+.menu-ul{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1em; */
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.menu-ul li{
+    position: relative;
+    font-weight: bold;
+    font-size: 1.8em; /* space for arrow*/
+    display: flex;
+    justify-content: space-between;
+    /* align-items: space-between;
+    border: 1px solid #000; */
+    width: 100%;
+    padding: 0.25em 0em 0.25em 1.5em;
+}
+
+.menu-ul .a:hover::after{
+    content: "";
+    width: 1em;
+    height: 1em;
+  /* Arrow as a mask */
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 16 12 8 18"/></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 16 12 8 18"/></svg>') no-repeat center / contain;
+    background-color: #000; /* arrow color */
+    transition: background-color 0.3s ease;
+}
+
+.sub-list{
+    display: none;
+}
+
+.sub-item1{
+    position: fixed;
+    background-color: #fff;
+    z-index: 1;
+    /* border: 1px solid #000; */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 0em 0em 3em 0em;
+    opacity: 0;
+    transform: translateX(20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.sub-content1{
+    font-size: 0.5em;
+}
+
+.sub-content2,.sub-content3 {
+    font-size: 0.35em;
+    padding-left: 1.3em;
+    margin-top: 5em;
+}
+
+.sub-content2-list p, .sub-content3-list p{
+    padding-left: 1.5em;
+    font-size: 1.7em;
+    color: #808080;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+/* .sub-item2{
+    position: fixed;
+    background-color: #fff;
+    z-index: 1;
+    border: 1px solid #000;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 0em 0em 3em 0em;
+    opacity: 0;
+    transform: translateX(20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+} */
+
+/* Menu hamburger: Opacity for nav section */
+
+.nav-search-icon,.nav-bag-icon,.nav-apple-img{
+    transition: opacity ease 0s;
+}
+.nav-search-icon.active,.nav-bag-icon.active,.nav-apple-img.active{
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+
+.nav-left-chevron.active{
+    opacity: 1;
+    transition-delay: 0.5s;
+    pointer-events: auto;
+}
+
+/* For left chevron */
+.sub-item1.active{
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+    pointer-events: auto;
+}
