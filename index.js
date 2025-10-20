@@ -90,3 +90,44 @@ menuUl.addEventListener('click', e => {
     document.querySelector('.nav-left-chevron').classList.add('active');
 })
 // Note to self: When I'm turning everything to js i should not forget to fix the li issues. Would probably just turn them to div
+
+// document.querySelector('.footer-chevron').addEventListener('click', () => {
+//     document.querySelector('.footer-chevron').classList.toggle('active');
+// })
+
+// document.querySelector('.footer-nav').addEventListener('click', e => {
+//     const p = e.target.closest('p');
+//     if (!p) return;
+
+//     p.querySelectorAll('.footer-nav div').forEach( item => {
+//         if(!(item.classList.contains('active'))) {
+//             item.classList.remove('active');
+//         } else {
+//             item.classList.add('active');
+//         }
+//     })
+// })
+const container = document.querySelector('.footer-nav');
+
+container.addEventListener('click', e => {
+  const p = e.target.closest('p');
+  if (!p || !container.contains(p)) return;
+
+  const parentDiv = p.parentElement;
+
+  // toggle active on parent div
+  parentDiv.classList.toggle('active');
+
+  // update aria-expanded on the <p>
+  const expanded = parentDiv.classList.contains('active');
+  p.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+  // optional: close other sections when one opens
+  document.querySelectorAll('.footer-nav > div').forEach(item => {
+    if (item !== parentDiv) {
+      item.classList.remove('active');
+      const otherP = item.querySelector('p');
+      if (otherP) otherP.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
